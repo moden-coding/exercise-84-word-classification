@@ -57,7 +57,7 @@ class TestWordClassification(unittest.TestCase):
     def test_contains_valid_chars(self):
         alphabet = "abcdefghijklmnopqrstuvwxyzäö-"
         inputs = [alphabet, alphabet + "#", alphabet[1:], "", "ä"]
-        expected = [True, False, True, True]
+        expected = [True, False, True, True, True]
         for s, e in zip(inputs, expected):
             self.assertEqual(
                 contains_valid_chars(s), e,
